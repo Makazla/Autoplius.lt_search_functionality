@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot rpa="false" generated="20190710 23:05:24.189" generator="Robot 3.1.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/mariuskazlauskas/Desktop/eclipse/SEB_loan_calc/kalkuliatorius" id="s1" name="Kalkuliatorius">
+<suite source="/Users/mariuskazlauskas/Desktop/eclipse/SEB_loan_calc/kalkuliatorius/test" id="s1-s1" name="Test">
+<suite source="/Users/mariuskazlauskas/Desktop/eclipse/SEB_loan_calc/kalkuliatorius/test/login.robot" id="s1-s1-s1" name="Login">
+<test id="s1-s1-s1-t1" name="ENETER VALUES TO SEB LT CALCULATOR">
+<kw name="Create Webdriver" library="SeleniumLibrary">
+<doc>Creates an instance of Selenium WebDriver.</doc>
+<arguments>
+<arg>Chrome</arg>
+<arg>executable_path=/usr/local/bin/chromedriver</arg>
+</arguments>
+<msg timestamp="20190710 23:05:24.798" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" endtime="20190710 23:05:27.871" starttime="20190710 23:05:24.793"></status>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<doc>Navigates the active browser instance to the provided ``url``.</doc>
+<arguments>
+<arg>https://www.seb.lt/eng/private/calculator-leasing</arg>
+</arguments>
+<msg timestamp="20190710 23:05:27.875" level="INFO">Opening url 'https://www.seb.lt/eng/private/calculator-leasing'</msg>
+<status status="PASS" endtime="20190710 23:05:32.396" starttime="20190710 23:05:27.873"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20190710 23:05:32.401" starttime="20190710 23:05:32.397"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into text field identified by ``locator``.</doc>
+<arguments>
+<arg>data-min=5000</arg>
+<arg>8000</arg>
+</arguments>
+<msg timestamp="20190710 23:05:32.403" level="INFO">Typing text '8000' into text field 'data-min=5000'.</msg>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes screenshot of the current page and embeds it into log file.</doc>
+<msg timestamp="20190710 23:05:37.784" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190710 23:05:37.785" starttime="20190710 23:05:37.410"></status>
+</kw>
+<msg timestamp="20190710 23:05:37.790" level="FAIL">Element with locator 'data-min=5000' not found.</msg>
+<status status="FAIL" endtime="20190710 23:05:37.791" starttime="20190710 23:05:32.402"></status>
+</kw>
+<status status="FAIL" endtime="20190710 23:05:37.792" critical="yes" starttime="20190710 23:05:24.791">Element with locator 'data-min=5000' not found.</status>
+</test>
+<status status="FAIL" endtime="20190710 23:05:37.794" starttime="20190710 23:05:24.287"></status>
+</suite>
+<status status="FAIL" endtime="20190710 23:05:37.798" starttime="20190710 23:05:24.283"></status>
+</suite>
+<status status="FAIL" endtime="20190710 23:05:37.800" starttime="20190710 23:05:24.245"></status>
+</suite>
+<statistics>
+<total>
+<stat fail="1" pass="0">Critical Tests</stat>
+<stat fail="1" pass="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat fail="1" id="s1" name="Kalkuliatorius" pass="0">Kalkuliatorius</stat>
+<stat fail="1" id="s1-s1" name="Test" pass="0">Kalkuliatorius.Test</stat>
+<stat fail="1" id="s1-s1-s1" name="Login" pass="0">Kalkuliatorius.Test.Login</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
