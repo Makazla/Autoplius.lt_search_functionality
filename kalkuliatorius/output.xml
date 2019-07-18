@@ -1,55 +1,120 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190710 23:05:24.189" generator="Robot 3.1.2 (Python 2.7.10 on darwin)">
-<suite source="/Users/mariuskazlauskas/Desktop/eclipse/SEB_loan_calc/kalkuliatorius" id="s1" name="Kalkuliatorius">
-<suite source="/Users/mariuskazlauskas/Desktop/eclipse/SEB_loan_calc/kalkuliatorius/test" id="s1-s1" name="Test">
-<suite source="/Users/mariuskazlauskas/Desktop/eclipse/SEB_loan_calc/kalkuliatorius/test/login.robot" id="s1-s1-s1" name="Login">
-<test id="s1-s1-s1-t1" name="ENETER VALUES TO SEB LT CALCULATOR">
+<robot rpa="false" generated="20190718 13:01:13.824" generator="Robot 3.1.2 (Python 2.7.10 on darwin)">
+<suite source="/Users/mariuskazlauskas/git/repository/kalkuliatorius" id="s1" name="Kalkuliatorius">
+<suite source="/Users/mariuskazlauskas/git/repository/kalkuliatorius/test" id="s1-s1" name="Test">
+<suite source="/Users/mariuskazlauskas/git/repository/kalkuliatorius/test/login.robot" id="s1-s1-s1" name="Login">
+<test id="s1-s1-s1-t1" name="Autoplius.LT pasizaidimui">
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <doc>Creates an instance of Selenium WebDriver.</doc>
 <arguments>
 <arg>Chrome</arg>
 <arg>executable_path=/usr/local/bin/chromedriver</arg>
 </arguments>
-<msg timestamp="20190710 23:05:24.798" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" endtime="20190710 23:05:27.871" starttime="20190710 23:05:24.793"></status>
+<msg timestamp="20190718 13:01:14.579" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" endtime="20190718 13:01:17.660" starttime="20190718 13:01:14.578"></status>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
 <arguments>
-<arg>https://www.seb.lt/eng/private/calculator-leasing</arg>
+<arg>https://autoplius.lt/</arg>
 </arguments>
-<msg timestamp="20190710 23:05:27.875" level="INFO">Opening url 'https://www.seb.lt/eng/private/calculator-leasing'</msg>
-<status status="PASS" endtime="20190710 23:05:32.396" starttime="20190710 23:05:27.873"></status>
+<msg timestamp="20190718 13:01:17.665" level="INFO">Opening url 'https://autoplius.lt/'</msg>
+<status status="PASS" endtime="20190718 13:01:20.357" starttime="20190718 13:01:17.662"></status>
 </kw>
 <kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
 <doc>Sets the implicit wait value used by Selenium.</doc>
 <arguments>
 <arg>5</arg>
 </arguments>
-<status status="PASS" endtime="20190710 23:05:32.401" starttime="20190710 23:05:32.397"></status>
+<status status="PASS" endtime="20190718 13:01:20.362" starttime="20190718 13:01:20.358"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20190718 13:01:20.368" starttime="20190718 13:01:20.364"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[1]/form/div[5]/div[2]/a</arg>
+</arguments>
+<msg timestamp="20190718 13:01:20.370" level="INFO">Clicking element 'xpath=/html/body/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[1]/form/div[5]/div[2]/a'.</msg>
+<status status="PASS" endtime="20190718 13:01:22.002" starttime="20190718 13:01:20.369"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
 <arguments>
-<arg>data-min=5000</arg>
-<arg>8000</arg>
+<arg>name=qt</arg>
+<arg>alfa romeo spider</arg>
 </arguments>
-<msg timestamp="20190710 23:05:32.403" level="INFO">Typing text '8000' into text field 'data-min=5000'.</msg>
+<msg timestamp="20190718 13:01:22.005" level="INFO">Typing text 'alfa romeo spider' into text field 'name=qt'.</msg>
+<status status="PASS" endtime="20190718 13:01:22.675" starttime="20190718 13:01:22.003"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[1]/form/div[2]/a/strong/span</arg>
+</arguments>
+<msg timestamp="20190718 13:01:22.679" level="INFO">Clicking element 'xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[1]/form/div[2]/a/strong/span'.</msg>
+<status status="PASS" endtime="20190718 13:01:24.568" starttime="20190718 13:01:22.676"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>link=Redaguoti paiešką</arg>
+</arguments>
+<msg timestamp="20190718 13:01:24.570" level="INFO">Clicking element 'link=Redaguoti paiešką'.</msg>
+<status status="PASS" endtime="20190718 13:01:25.924" starttime="20190718 13:01:24.569"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name=search_cats_1</arg>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190718 13:01:25.929" level="INFO">Sending key(s) (u'2',) to name=search_cats_1 element.</msg>
+<msg timestamp="20190718 13:01:25.958" level="INFO">Sending key 2</msg>
+<status status="PASS" endtime="20190718 13:01:26.062" starttime="20190718 13:01:25.925"></status>
+</kw>
+<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
+<doc>Sets the implicit wait value used by Selenium.</doc>
+<arguments>
+<arg>5</arg>
+</arguments>
+<status status="PASS" endtime="20190718 13:01:26.066" starttime="20190718 13:01:26.063"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name=make_id_list</arg>
+<arg>Alfa Romeo</arg>
+</arguments>
+<msg timestamp="20190718 13:01:26.068" level="INFO">Sending key(s) (u'Alfa Romeo',) to name=make_id_list element.</msg>
+<msg timestamp="20190718 13:01:26.088" level="INFO">Sending keys Alfa Romeo</msg>
+<status status="PASS" endtime="20190718 13:01:27.710" starttime="20190718 13:01:26.067"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>name=make_id_sublist_portal</arg>
+</arguments>
 <kw name="Capture Page Screenshot" library="SeleniumLibrary">
 <doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190710 23:05:37.784" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-5.png"&gt;&lt;img src="selenium-screenshot-5.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190710 23:05:37.785" starttime="20190710 23:05:37.410"></status>
+<msg timestamp="20190718 13:01:28.546" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" endtime="20190718 13:01:28.547" starttime="20190718 13:01:27.712"></status>
 </kw>
-<msg timestamp="20190710 23:05:37.790" level="FAIL">Element with locator 'data-min=5000' not found.</msg>
-<status status="FAIL" endtime="20190710 23:05:37.791" starttime="20190710 23:05:32.402"></status>
+<msg timestamp="20190718 13:01:28.556" level="FAIL">"keys" argument can not be empty.</msg>
+<status status="FAIL" endtime="20190718 13:01:28.557" starttime="20190718 13:01:27.711"></status>
 </kw>
-<status status="FAIL" endtime="20190710 23:05:37.792" critical="yes" starttime="20190710 23:05:24.791">Element with locator 'data-min=5000' not found.</status>
+<status status="FAIL" endtime="20190718 13:01:28.558" critical="yes" starttime="20190718 13:01:14.577">"keys" argument can not be empty.</status>
 </test>
-<status status="FAIL" endtime="20190710 23:05:37.794" starttime="20190710 23:05:24.287"></status>
+<status status="FAIL" endtime="20190718 13:01:28.561" starttime="20190718 13:01:13.981"></status>
 </suite>
-<status status="FAIL" endtime="20190710 23:05:37.798" starttime="20190710 23:05:24.283"></status>
+<status status="FAIL" endtime="20190718 13:01:28.566" starttime="20190718 13:01:13.978"></status>
 </suite>
-<status status="FAIL" endtime="20190710 23:05:37.800" starttime="20190710 23:05:24.245"></status>
+<status status="FAIL" endtime="20190718 13:01:28.591" starttime="20190718 13:01:13.923"></status>
 </suite>
 <statistics>
 <total>
