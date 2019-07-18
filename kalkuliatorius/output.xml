@@ -1,47 +1,59 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot rpa="false" generated="20190718 13:01:13.824" generator="Robot 3.1.2 (Python 2.7.10 on darwin)">
+<robot rpa="false" generated="20190719 00:06:37.620" generator="Robot 3.1.2 (Python 2.7.10 on darwin)">
 <suite source="/Users/mariuskazlauskas/git/repository/kalkuliatorius" id="s1" name="Kalkuliatorius">
 <suite source="/Users/mariuskazlauskas/git/repository/kalkuliatorius/test" id="s1-s1" name="Test">
 <suite source="/Users/mariuskazlauskas/git/repository/kalkuliatorius/test/login.robot" id="s1-s1-s1" name="Login">
-<test id="s1-s1-s1-t1" name="Autoplius.LT pasizaidimui">
+<test id="s1-s1-s1-t1" name="AUTOPLIUS SEARCH TEST">
 <kw name="Create Webdriver" library="SeleniumLibrary">
 <doc>Creates an instance of Selenium WebDriver.</doc>
 <arguments>
 <arg>Chrome</arg>
 <arg>executable_path=/usr/local/bin/chromedriver</arg>
 </arguments>
-<msg timestamp="20190718 13:01:14.579" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
-<status status="PASS" endtime="20190718 13:01:17.660" starttime="20190718 13:01:14.578"></status>
+<msg timestamp="20190719 00:06:38.143" level="INFO">Creating an instance of the Chrome WebDriver.</msg>
+<status status="PASS" endtime="20190719 00:06:40.797" starttime="20190719 00:06:38.142"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:06:42.802" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:06:42.802" starttime="20190719 00:06:40.798"></status>
 </kw>
 <kw name="Go To" library="SeleniumLibrary">
 <doc>Navigates the active browser instance to the provided ``url``.</doc>
 <arguments>
 <arg>https://autoplius.lt/</arg>
 </arguments>
-<msg timestamp="20190718 13:01:17.665" level="INFO">Opening url 'https://autoplius.lt/'</msg>
-<status status="PASS" endtime="20190718 13:01:20.357" starttime="20190718 13:01:17.662"></status>
+<msg timestamp="20190719 00:06:42.804" level="INFO">Opening url 'https://autoplius.lt/'</msg>
+<status status="PASS" endtime="20190719 00:06:46.247" starttime="20190719 00:06:42.803"></status>
 </kw>
-<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>5</arg>
+<arg>2</arg>
 </arguments>
-<status status="PASS" endtime="20190718 13:01:20.362" starttime="20190718 13:01:20.358"></status>
+<msg timestamp="20190719 00:06:48.254" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:06:48.254" starttime="20190719 00:06:46.248"></status>
 </kw>
-<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
 <arguments>
-<arg>5</arg>
+<arg>xpath=/html/body/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[1]/form/div[1]/div[2]/label[2]</arg>
+<arg>Nauji</arg>
 </arguments>
-<status status="PASS" endtime="20190718 13:01:20.368" starttime="20190718 13:01:20.364"></status>
+<msg timestamp="20190719 00:06:48.257" level="INFO">Sending key(s) (u'Nauji',) to xpath=/html/body/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[1]/form/div[1]/div[2]/label[2] element.</msg>
+<msg timestamp="20190719 00:06:48.279" level="INFO">Sending keys Nauji</msg>
+<status status="PASS" endtime="20190719 00:06:48.384" starttime="20190719 00:06:48.255"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>xpath=/html/body/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[1]/form/div[5]/div[2]/a</arg>
+<arg>2</arg>
 </arguments>
-<msg timestamp="20190718 13:01:20.370" level="INFO">Clicking element 'xpath=/html/body/div[1]/div[3]/div/div[1]/div[1]/div[2]/div[1]/form/div[5]/div[2]/a'.</msg>
-<status status="PASS" endtime="20190718 13:01:22.002" starttime="20190718 13:01:20.369"></status>
+<msg timestamp="20190719 00:06:50.388" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:06:50.388" starttime="20190719 00:06:48.384"></status>
 </kw>
 <kw name="Input Text" library="SeleniumLibrary">
 <doc>Types the given ``text`` into text field identified by ``locator``.</doc>
@@ -49,41 +61,32 @@
 <arg>name=qt</arg>
 <arg>alfa romeo spider</arg>
 </arguments>
-<msg timestamp="20190718 13:01:22.005" level="INFO">Typing text 'alfa romeo spider' into text field 'name=qt'.</msg>
-<status status="PASS" endtime="20190718 13:01:22.675" starttime="20190718 13:01:22.003"></status>
+<msg timestamp="20190719 00:06:50.391" level="INFO">Typing text 'alfa romeo spider' into text field 'name=qt'.</msg>
+<status status="PASS" endtime="20190719 00:06:50.671" starttime="20190719 00:06:50.389"></status>
 </kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
 <arguments>
-<arg>xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[1]/form/div[2]/a/strong/span</arg>
-</arguments>
-<msg timestamp="20190718 13:01:22.679" level="INFO">Clicking element 'xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[1]/form/div[2]/a/strong/span'.</msg>
-<status status="PASS" endtime="20190718 13:01:24.568" starttime="20190718 13:01:22.676"></status>
-</kw>
-<kw name="Click Element" library="SeleniumLibrary">
-<doc>Click element identified by ``locator``.</doc>
-<arguments>
-<arg>link=Redaguoti paiešką</arg>
-</arguments>
-<msg timestamp="20190718 13:01:24.570" level="INFO">Clicking element 'link=Redaguoti paiešką'.</msg>
-<status status="PASS" endtime="20190718 13:01:25.924" starttime="20190718 13:01:24.569"></status>
-</kw>
-<kw name="Press Keys" library="SeleniumLibrary">
-<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
-<arguments>
-<arg>name=search_cats_1</arg>
 <arg>2</arg>
 </arguments>
-<msg timestamp="20190718 13:01:25.929" level="INFO">Sending key(s) (u'2',) to name=search_cats_1 element.</msg>
-<msg timestamp="20190718 13:01:25.958" level="INFO">Sending key 2</msg>
-<status status="PASS" endtime="20190718 13:01:26.062" starttime="20190718 13:01:25.925"></status>
+<msg timestamp="20190719 00:06:52.673" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:06:52.673" starttime="20190719 00:06:50.671"></status>
 </kw>
-<kw name="Set Browser Implicit Wait" library="SeleniumLibrary">
-<doc>Sets the implicit wait value used by Selenium.</doc>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
 <arguments>
-<arg>5</arg>
+<arg>link=Detali paieška</arg>
 </arguments>
-<status status="PASS" endtime="20190718 13:01:26.066" starttime="20190718 13:01:26.063"></status>
+<msg timestamp="20190719 00:06:52.675" level="INFO">Clicking element 'link=Detali paieška'.</msg>
+<status status="PASS" endtime="20190719 00:06:54.564" starttime="20190719 00:06:52.674"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:06:56.566" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:06:56.567" starttime="20190719 00:06:54.565"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
@@ -91,42 +94,249 @@
 <arg>name=make_id_list</arg>
 <arg>Alfa Romeo</arg>
 </arguments>
-<msg timestamp="20190718 13:01:26.068" level="INFO">Sending key(s) (u'Alfa Romeo',) to name=make_id_list element.</msg>
-<msg timestamp="20190718 13:01:26.088" level="INFO">Sending keys Alfa Romeo</msg>
-<status status="PASS" endtime="20190718 13:01:27.710" starttime="20190718 13:01:26.067"></status>
+<msg timestamp="20190719 00:06:56.570" level="INFO">Sending key(s) (u'Alfa Romeo',) to name=make_id_list element.</msg>
+<msg timestamp="20190719 00:06:56.622" level="INFO">Sending keys Alfa Romeo</msg>
+<status status="PASS" endtime="20190719 00:06:57.174" starttime="20190719 00:06:56.567"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:06:59.177" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:06:59.178" starttime="20190719 00:06:57.175"></status>
 </kw>
 <kw name="Press Keys" library="SeleniumLibrary">
 <doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
 <arguments>
-<arg>name=make_id_sublist_portal</arg>
+<arg>xpath=//*[@id="make_id_sublist_portal"]</arg>
+<arg>Mito</arg>
 </arguments>
-<kw name="Capture Page Screenshot" library="SeleniumLibrary">
-<doc>Takes screenshot of the current page and embeds it into log file.</doc>
-<msg timestamp="20190718 13:01:28.546" html="yes" level="INFO">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-60.png"&gt;&lt;img src="selenium-screenshot-60.png" width="800px"&gt;&lt;/a&gt;</msg>
-<status status="PASS" endtime="20190718 13:01:28.547" starttime="20190718 13:01:27.712"></status>
+<msg timestamp="20190719 00:06:59.180" level="INFO">Sending key(s) (u'Mito',) to xpath=//*[@id="make_id_sublist_portal"] element.</msg>
+<msg timestamp="20190719 00:06:59.196" level="INFO">Sending keys Mito</msg>
+<status status="PASS" endtime="20190719 00:06:59.287" starttime="20190719 00:06:59.178"></status>
 </kw>
-<msg timestamp="20190718 13:01:28.556" level="FAIL">"keys" argument can not be empty.</msg>
-<status status="FAIL" endtime="20190718 13:01:28.557" starttime="20190718 13:01:27.711"></status>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:01.289" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:01.289" starttime="20190719 00:06:59.288"></status>
 </kw>
-<status status="FAIL" endtime="20190718 13:01:28.558" critical="yes" starttime="20190718 13:01:14.577">"keys" argument can not be empty.</status>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>id=addbtn_make_id</arg>
+<arg>Įkelti</arg>
+</arguments>
+<msg timestamp="20190719 00:07:01.291" level="INFO">Sending key(s) (u'\u012ekelti',) to id=addbtn_make_id element.</msg>
+<msg timestamp="20190719 00:07:01.308" level="INFO">Sending keys Įkelti</msg>
+<status status="PASS" endtime="20190719 00:07:01.409" starttime="20190719 00:07:01.290"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:03.412" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:03.413" starttime="20190719 00:07:01.410"></status>
+</kw>
+<kw name="Execute Javascript" library="SeleniumLibrary">
+<doc>Executes the given JavaScript code with possible arguments.</doc>
+<arguments>
+<arg>window.scrollTo(0, document.body.scrollHeight)</arg>
+</arguments>
+<msg timestamp="20190719 00:07:03.416" level="INFO">Executing JavaScript:
+window.scrollTo(0, document.body.scrollHeight)
+Without any arguments.</msg>
+<status status="PASS" endtime="20190719 00:07:03.446" starttime="20190719 00:07:03.414"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:05.449" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:05.449" starttime="20190719 00:07:03.447"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>xpath=//*[@id="make_date_from"]</arg>
+<arg>2006</arg>
+</arguments>
+<msg timestamp="20190719 00:07:05.451" level="INFO">Selecting options from selection list 'xpath=//*[@id="make_date_from"]' by value 2006.</msg>
+<status status="PASS" endtime="20190719 00:07:05.603" starttime="20190719 00:07:05.450"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:07.608" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:07.609" starttime="20190719 00:07:05.605"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>xpath=//*[@id="sell_price_from"]</arg>
+<arg>2000</arg>
+</arguments>
+<msg timestamp="20190719 00:07:07.612" level="INFO">Selecting options from selection list 'xpath=//*[@id="sell_price_from"]' by value 2000.</msg>
+<status status="PASS" endtime="20190719 00:07:07.718" starttime="20190719 00:07:07.611"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:09.721" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:09.722" starttime="20190719 00:07:07.719"></status>
+</kw>
+<kw name="Select From List By Value" library="SeleniumLibrary">
+<doc>Selects options from selection list ``locator`` by ``values``.</doc>
+<arguments>
+<arg>xpath=//*[@id="has_damaged_id"]</arg>
+<arg>10924</arg>
+</arguments>
+<msg timestamp="20190719 00:07:09.723" level="INFO">Selecting options from selection list 'xpath=//*[@id="has_damaged_id"]' by value 10924.</msg>
+<status status="PASS" endtime="20190719 00:07:09.879" starttime="20190719 00:07:09.722"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:11.882" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:11.883" starttime="20190719 00:07:09.879"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>id=technical_passport</arg>
+<arg>1</arg>
+</arguments>
+<msg timestamp="20190719 00:07:11.885" level="INFO">Sending key(s) (u'1',) to id=technical_passport element.</msg>
+<msg timestamp="20190719 00:07:11.900" level="INFO">Sending key 1</msg>
+<status status="PASS" endtime="20190719 00:07:12.017" starttime="20190719 00:07:11.883"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:14.019" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:14.020" starttime="20190719 00:07:12.018"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>xpath=//*[@id="make_id_sublist_portal"]</arg>
+<arg>Spider</arg>
+</arguments>
+<msg timestamp="20190719 00:07:14.022" level="INFO">Sending key(s) (u'Spider',) to xpath=//*[@id="make_id_sublist_portal"] element.</msg>
+<msg timestamp="20190719 00:07:14.037" level="INFO">Sending keys Spider</msg>
+<status status="PASS" endtime="20190719 00:07:14.158" starttime="20190719 00:07:14.021"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:16.159" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:16.160" starttime="20190719 00:07:14.158"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>id=addbtn_make_id</arg>
+<arg>Įkelti</arg>
+</arguments>
+<msg timestamp="20190719 00:07:16.163" level="INFO">Sending key(s) (u'\u012ekelti',) to id=addbtn_make_id element.</msg>
+<msg timestamp="20190719 00:07:16.178" level="INFO">Sending keys Įkelti</msg>
+<status status="PASS" endtime="20190719 00:07:16.247" starttime="20190719 00:07:16.161"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:18.248" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:18.249" starttime="20190719 00:07:16.247"></status>
+</kw>
+<kw name="Clear Element Text" library="SeleniumLibrary">
+<doc>Clears the value of text entry element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=//input[@id='qt']</arg>
+</arguments>
+<status status="PASS" endtime="20190719 00:07:18.336" starttime="20190719 00:07:18.249"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:20.338" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:20.339" starttime="20190719 00:07:18.337"></status>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click element identified by ``locator``.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/div[4]/div/div[2]</arg>
+</arguments>
+<msg timestamp="20190719 00:07:20.340" level="INFO">Clicking element 'xpath=/html/body/div[1]/div[4]/div/div[2]'.</msg>
+<status status="PASS" endtime="20190719 00:07:20.416" starttime="20190719 00:07:20.339"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:22.419" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:22.420" starttime="20190719 00:07:20.418"></status>
+</kw>
+<kw name="Press Keys" library="SeleniumLibrary">
+<doc>Simulates user pressing key(s) to an element or on the active browser.</doc>
+<arguments>
+<arg>xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[1]/form/div[2]/a/strong/span</arg>
+<arg>Ieškoti</arg>
+</arguments>
+<msg timestamp="20190719 00:07:22.423" level="INFO">Sending key(s) (u'Ie\u0161koti',) to xpath=/html/body/div[1]/div[2]/div[1]/div[2]/div[2]/div/div[1]/form/div[2]/a/strong/span element.</msg>
+<msg timestamp="20190719 00:07:22.448" level="INFO">Sending keys Ieškoti</msg>
+<status status="PASS" endtime="20190719 00:07:23.623" starttime="20190719 00:07:22.421"></status>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<doc>Pauses the test executed for the given time.</doc>
+<arguments>
+<arg>2</arg>
+</arguments>
+<msg timestamp="20190719 00:07:25.625" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" endtime="20190719 00:07:25.626" starttime="20190719 00:07:23.623"></status>
+</kw>
+<kw name="Close All Browsers" library="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" endtime="20190719 00:07:25.824" starttime="20190719 00:07:25.627"></status>
+</kw>
+<status status="PASS" endtime="20190719 00:07:25.825" critical="yes" starttime="20190719 00:06:38.140"></status>
 </test>
-<status status="FAIL" endtime="20190718 13:01:28.561" starttime="20190718 13:01:13.981"></status>
+<status status="PASS" endtime="20190719 00:07:25.829" starttime="20190719 00:06:37.698"></status>
 </suite>
-<status status="FAIL" endtime="20190718 13:01:28.566" starttime="20190718 13:01:13.978"></status>
+<status status="PASS" endtime="20190719 00:07:25.836" starttime="20190719 00:06:37.695"></status>
 </suite>
-<status status="FAIL" endtime="20190718 13:01:28.591" starttime="20190718 13:01:13.923"></status>
+<status status="PASS" endtime="20190719 00:07:25.848" starttime="20190719 00:06:37.665"></status>
 </suite>
 <statistics>
 <total>
-<stat fail="1" pass="0">Critical Tests</stat>
-<stat fail="1" pass="0">All Tests</stat>
+<stat fail="0" pass="1">Critical Tests</stat>
+<stat fail="0" pass="1">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat fail="1" id="s1" name="Kalkuliatorius" pass="0">Kalkuliatorius</stat>
-<stat fail="1" id="s1-s1" name="Test" pass="0">Kalkuliatorius.Test</stat>
-<stat fail="1" id="s1-s1-s1" name="Login" pass="0">Kalkuliatorius.Test.Login</stat>
+<stat fail="0" id="s1" name="Kalkuliatorius" pass="1">Kalkuliatorius</stat>
+<stat fail="0" id="s1-s1" name="Test" pass="1">Kalkuliatorius.Test</stat>
+<stat fail="0" id="s1-s1-s1" name="Login" pass="1">Kalkuliatorius.Test.Login</stat>
 </suite>
 </statistics>
 <errors>
