@@ -60,3 +60,71 @@ AUTOPLIUS SEARCH TEST
         Close All Browsers 
     
 
+*** Settings ***
+Library    SeleniumLibrary  
+*** Test Cases ***
+    
+CITADELE CREDIT CALCULATOR AUTOMATION TEST
+    
+        Create Webdriver     Chrome     executable_path=/usr/local/bin/chromedriver
+        Sleep    1
+        # Opening the link
+        Go to    https://www.cblbank.lt/apps/service/private/consumer-credit?_ga=2.20458620.554853723.1563525608-1418223711.1551464072
+        Sleep    1
+        # Entering application form details "name"
+        Input Text    name=Client[name]    Jonas
+        Sleep    1
+        # Entering application form details "surname"
+        Input Text    name=Client[surname]    Jonauskas
+        Sleep    1
+        # Accepting grammar rules
+        Click Element    xpath=/html/body/div[3]/div/div/div[2]
+        Sleep    1
+        # Accepting cookies
+        Click Element    xpath=/html/body/div[2]/div/div/form/div[6]/div/div/div[2]/button
+        Sleep    1
+        # G. Data/Asmens k.
+        Input Text    name=Client[code]    1982-06-09
+        # Telefono Nr.
+        Input Text    name=Client[phoneNumber]    +37064063099 
+        Sleep    1
+        # Miestas
+        Input Text    name=Client[city]    Vilnius
+        Sleep    1
+        # El. Pastas
+        Input Text    name=Client[email]    gumtree.postbox@gmail.com
+        Sleep    1
+        # Seimynine padetis
+        Press Keys    name=Client[maritalStatus]    nevedęs 
+        Sleep    1
+        # Suma
+        Input Text    name=Step0[creditAmount]    10000
+        Sleep    1
+        # Terminas
+        Input Text    name=Step0[creditTerm]    60
+        Sleep    1
+        # Paskirtis
+        Press Keys    name=Step0[creditPurpose]    Automobilio pirkimui
+        Sleep    1
+        # Atlyginimas
+        Input Text    name=IncomeAndLiabilities[salary]    1200
+        Sleep    1
+        # Pareigos
+        Press Keys    name=IncomeAndLiabilities[position]    Specialistas
+        Sleep    1
+        # Kitos pajamos
+        Input Text    name=IncomeAndLiabilities[otherIncomes]    0
+        Sleep    1
+        # Isipareigojimai
+        Input Text    name=IncomeAndLiabilities[obligationFee]    250
+        Sleep    1
+        # Marketingui
+        Press Keys    name=Step0[knowAboutCreditFrom]    Internete
+        Sleep    1
+        # Toliau
+        Press Keys    xpath=//*[@id="submit_btn_dir"]    next
+        Sleep    2
+        Close All Browsers 
+        
+
+
