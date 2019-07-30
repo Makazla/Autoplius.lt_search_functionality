@@ -92,7 +92,7 @@ CITADELE CREDIT CALCULATOR AUTOMATION TEST
         Input Text    name=Client[city]    Vilnius
         Sleep    1
         # El. Pastas
-        Input Text    name=Client[email]    gumtree.postbox@gmail.com
+        Input Text    name=Client[email]    kazlausko.m@gmail.com
         Sleep    1
         # Seimynine padetis
         Press Keys    name=Client[maritalStatus]    nevedęs 
@@ -126,5 +126,168 @@ CITADELE CREDIT CALCULATOR AUTOMATION TEST
         Sleep    2
         Close All Browsers 
         
+*** Settings ***
+Library    SeleniumLibrary  
+*** Test Cases ***
+    
+INSTAGRAM LIKE AND COMMENT BOT
+        Create Webdriver     Firefox     executable_path=/usr/local/bin/geckodriver
+        Sleep    1
+        # Opening the link
+        Go to    https://www.instagram.com/
+        Sleep    1
+        # Log in
+        Press Keys    xpath://*[@class="_0mzm-.sqdOP.yWX7d" or @type="button"]    Log in with Facebook
+        # Press Keys    xpath=/html/body/span/section/main/article/div[2]/div[1]/div/form/div[1]/button    Log in with facebook
+        Sleep    1
+        # Entering log in details
+        Input text    xpath=//*[@id="m_login_email"]    +37064063099
+        Input text    xpath=//*[@name="pass"]   stirniuxbebriuX7
+        Press Keys    name=login    Log In
+        Sleep    2
+        Click Element    css=div[class="piCib"][name="email"][class^="form-control"]    kazlausko.m@gmail.com
+        # Click Element    xpath=//button[span="Not Now"]
+        # Click ELement    css=div[class="aOOlW.HoLwm"][span="Not Now"]
+        # Click Element    xpath=//button[@class="HoLwm" and span="Not Now"]
+        # Click ELement    xpath=//button[@class="HoLwm" and contains(., "Not Now")]
+        # Click ELement    xpath=//button[contains(.,'Not Now')]
+        # Press Keys    css=div[class=".aOOlW.HoLwm"][type="button"]    Not Now
+        # Press Keys    xpath=//*[@class="aOOlW.HoLwm" or @tabindex="0"]    Not Now
+        # Click Element    xpath=//button[starts-with(@class,"aOOlW")]
+        # Click Element    css=button.aOOlW.HoLwm[span="Not Now"]
+        # Press Keys    css=html.js.logged-in.client-root body div.RnEpo.Yx5HN div.pbNvD.fPMEg div.piCib div.mt3GC button.aOOlW.HoLwm    Not Now
+        # Click Element    css=button:contains("Not Now")
+        # Sitie nepaejo
+        # Press Button    xpath=//*[@name="Not Now" and @tabindex="0"]    
+        # Press Keys    xpath=//*[ancestor::div[@tabindex='0']]    Not Now
+        # Press Keys    xpath=//*[@tabindex="0"]    Not Now
+        # Click Element    xpath=//button[contains(.,"Not Now")]
+        # Press Keys    xpath=//*[@tabindex="0"]    Not Now
+        # Press Keys    class=a00lW Holwm    Not Now
+        # Input text    xpath=//*[@placeholder="paddleboarding"]
+        # Click Button    xpath=//button[contains(.,'Not Now')]
+        # Click Button    css=button."aOOlW   HoLwm "(name="Not Now")
 
+*** Settings ***
+Library    SeleniumLibrary  
+*** Test Cases ***
+    
+SENUKAI PASPIRTUKAS
+        Create Webdriver     Firefox     executable_path=/usr/local/bin/geckodriver
+        Sleep    1
+        # Opening the link
+        Go to    https://www.senukai.lt
+        Sleep    1
+        # Searching for the item
+        Input Text    id=q    paspirtukas
+        Sleep    1
+        # Press Keys    css=div.sn-suggest-hint.sn-suggest-item[data-suggest="paspirtukai"]    Elektronikos prekės//TV, audio, video, telefonai//Dronai, riedžiai, paspirtukai ir išmanioji technika
+        # Sleep    1
+        # Press Keys    css=span.add-to-cart-catalog-btn.button-size-ms main-button[type="submit"]    Įdėti į krepšelį    
+        # Sleep    1
+        
+*** Settings ***
+Library    SeleniumLibrary  
+*** Test Cases ***
+    
+Paysera pr reg
+        # prisijungimas be reg.>registracija>prisijungimas po reg.
+        Create Webdriver     Chrome     executable_path=/usr/local/bin/chromedriver
+        Sleep    1
+        # Opening the link
+        Go to    https://bank.paysera.com/lt/login?fbclid=IwAR1qUl15HovXkqaDykKqiVdbisoEnhv3SUmf9hnRzXrexW5z1uCzTnczkb8
+        Sleep    1
+        # Bandome jungtis be registracijos
+        Input Text    name=userIdentifier    mariaus.mailbox@gmail.com
+        Sleep    1
+        Press Keys    xpath=//*[@type="submit"]    Prisijungti
+        Sleep    3
+        # Sukuriame paskyra
+        Press Keys    css=.text-capitalize > a    Susikurkite dabar! 
+        Sleep    1
+        # Ivedame el.p adresa
+        Input Text    css=input[type="text"][name="email"][class^="form-control"]    mariaus.mailbodwsxndddss@gmail.com
+        # Ivedame slaptazodi
+        Input Text    css=input[type="password"][name="password"][class^="form-control"]    vugvugvugA7
+        # Patvirtiname slaptazodi
+        Input Text    css=input[type="password"][name="verification"][class^="form-control"]    vugvugvugA7
+        # Ivedame vartotojo varda
+        Input Text    css=input[type="text"][name="name"][class^="form-control"]    Marius
+        # Ivedame vartotojo pavarde
+        Input Text    css=input[type="text"][name="surname"][class^="form-control"]    Kazlauskas
+        # Ivedame tel. nr.
+        Input Text    css=input[type="text"][name="phone"][class^="form-control"]    +37064063099
+        # Spaudziame "sutinku"
+        Press Keys    css=input[type="checkbox"]    Sutinku su Paysera
+        # Spaudziame "Atidaryti sask.
+        Press Keys    css=button[type="submit"][class^="btn"]    Atidaryti sąskaitą
+        Sleep    3
+        Click Element    css=a.text-capitalize   
+        # Click Element    xpath=//div[2]/a/span
+        # Click Link    css=a[href="/lt/login"[.name="prisijungimas"]    
+        # Click Element    link=Į el. pašto paskyrą
+        Sleep    1
+        # Loginas
+        Input Text    name=userIdentifier    mariaus.mailbox@gmail.com
+        Sleep    1
+        Press Keys    css=button[type="submit"][class^="btn"]    Prisijungti
+        Sleep    1
+        # Ivedame slaptazodi
+        Click Element     css=*[role="tab"][id="login-methods-heading-user_credentials"][class$="panel-heading-narrow"]
+        # Close All Browsers 
+        
+*** Settings ***
+Library    SeleniumLibrary  
+*** Test Cases ***
+    
+Paysera po reg
+    # prisijungimas po reg.
+        Create Webdriver     Chrome     executable_path=/usr/local/bin/chromedriver
+        Sleep    1
+        # Opening the link
+        Go to    https://bank.paysera.com/lt/login?fbclid=IwAR1qUl15HovXkqaDykKqiVdbisoEnhv3SUmf9hnRzXrexW5z1uCzTnczkb8
+        Sleep    1
+        # Loginas
+        Input Text    name=userIdentifier    mariaus.mailbox@gmail.com
+        Press Keys    css=button[type="submit"][class^="btn"]    Prisijungti
+        # Sleep    1
+        # Click Element    css=div[id^="login-methods"][class^="panel-heading-narrow"]
+        Sleep    1
+        Click Element    xpath=//div[2]/a/div/strong
+        # Click Element    xpath=//*[@id="login-methods-heading-user_credentials" or @class="h5"]
+        # Click Element    css=div[id^="login-methods"][class^="panel-heading-narrow"]
+        Sleep    1
+        # Input Text    css=input[class$="ng-touched"][name="email"]    kazlausko@gmail.com    
+        # Input Text    xpath=//class[starts-with(@class,"form-control.ng-pristine.ng-valid-server-validation.ng-invalid.ng-invalid-required.ng-valid-pattern.ng-touched")]    kazlausko@gmail.com
+       
+        # Renkames sali "Lietuva"
+        
+        # Press Keys    name=countryCode    lt
+        # Select From List By Value    xpath=//*[@option="lt"]    Lietuva
+        # Click Element    xpath=//*[@name="countryCode" and @value="lt"]
+        # Click Element    xpath=//*[@name="countryCode" and @value="Lietuva"]
+        
+        # Suvedame emaila
+        
+        # Input Text    css=input.form-control.ng-pristine.ng-valid.ng-valid-required.ng-touched    kazlausko@gm.com
+        # Input Text    css=input[class="form-control.ng-pristine.ng-valid.ng-valid-required.ng-touched"] [name="email"]    kazlausko@gmail.com
+        # Input text    xpath=//*[@type='text' or @name='email']    kazlausko@gmail.com
+        # Input Text    xpath=//*[contains(@name,'email')]    kazlausko@gmail.com
+        # Input Text    xpath=//*[@class="ng-touched"]//*[name="email"]    kazlausko@gmail.com
+        # Input Text    xpath=//input[@name="email"]    kazlausko@gmail.com
+        # Input Text    xpath=/html/body/div[2]/main/div/div/div/div/div[2]/div[2]/form/div[4]/div[2]/input    kazlausko@gmail.com
+        # Input Text    xpath=/html/body/div[2]/main/div/div/div/div/div[2]/div[2]/form/div[4]/div[2]    kazlausko@gmail.com    
+        # Input Text    xpath=//*[contains(name(), "email")]    kazlausko@gmail.com    
+        # Input Text    css=.form-group.has-feedback.ng-isolate-scope[name="email"]    kazlausko@gmail.com
+        # Input Text    xpath=//html[@id='ng-app']/body/div[2]/main/div/div/div/div/div[2]/div[2]/form/div[4]/div[2]/input    kazlausko@gmail.com
+        # Input Text    name=email    kazlausko@gmail.com
+        
+        # Radio buttonas gale
+        
+        # Press Keys    xpath=/html/body/div[2]/main/div/div/div/div/div[2]/div[2]/form/div[4]/div[9]/div/label/input    Sutinku su Paysera
+        # Press Keys    xpath=//*[@type="checkbox"]    Sutinku su Paysera    
+        # Click Element    xpath=*[@type="checkbox" and @text="Sutinku su Paysera"]
+          
+        
+        Sleep    1
 
