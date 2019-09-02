@@ -192,21 +192,23 @@ Library    SeleniumLibrary
     
 Paysera pr reg
         # prisijungimas be reg.>registracija>prisijungimas po reg.
-        Create Webdriver     Chrome     executable_path=/usr/local/bin/chromedriver
+        Create Webdriver     Firefox     executable_path=/usr/local/bin/geckodriver
         Sleep    1
         # Opening the link
         Go to    https://bank.paysera.com/lt/login?fbclid=IwAR1qUl15HovXkqaDykKqiVdbisoEnhv3SUmf9hnRzXrexW5z1uCzTnczkb8
         Sleep    1
         # Bandome jungtis be registracijos
-        Input Text    name=userIdentifier    mariaus.mailbox@gmail.com
+        Input Text    name=userIdentifier    kazlausko@gmail.com
         Sleep    1
         Press Keys    xpath=//*[@type="submit"]    Prisijungti
         Sleep    3
+        Execute JavaScript    window.scrollTo(0, document.body.scrollHeight)
         # Sukuriame paskyra
         Press Keys    css=.text-capitalize > a    Susikurkite dabar! 
         Sleep    1
+        
         # Ivedame el.p adresa
-        Input Text    css=input[type="text"][name="email"][class^="form-control"]    mariaus.mailbodwsxndddss@gmail.com
+        Input Text    css=input[type="text"][name="email"][class^="form-control"]    gumtree.postbox@gmail.com
         # Ivedame slaptazodi
         Input Text    css=input[type="password"][name="password"][class^="form-control"]    vugvugvugA7
         # Patvirtiname slaptazodi
@@ -221,19 +223,21 @@ Paysera pr reg
         Press Keys    css=input[type="checkbox"]    Sutinku su Paysera
         # Spaudziame "Atidaryti sask.
         Press Keys    css=button[type="submit"][class^="btn"]    Atidaryti sąskaitą
+        Press Keys    css=button[class="_2t-5"][tabindex="0"][role=button]
         Sleep    3
+        
         Click Element    css=a.text-capitalize   
         # Click Element    xpath=//div[2]/a/span
         # Click Link    css=a[href="/lt/login"[.name="prisijungimas"]    
         # Click Element    link=Į el. pašto paskyrą
         Sleep    1
         # Loginas
-        Input Text    name=userIdentifier    mariaus.mailbox@gmail.com
+        Input Text    name=userIdentifier    kazlausko@gmail.com
         Sleep    1
         Press Keys    css=button[type="submit"][class^="btn"]    Prisijungti
         Sleep    1
         # Ivedame slaptazodi
-        Click Element     css=*[role="tab"][id="login-methods-heading-user_credentials"][class$="panel-heading-narrow"]
+        # Click Element     css=*[role="tab"][id="login-methods-heading-user_credentials"][class$="panel-heading-narrow"]
         # Close All Browsers 
         
 *** Settings ***
@@ -242,13 +246,13 @@ Library    SeleniumLibrary
     
 Paysera po reg
     # prisijungimas po reg.
-        Create Webdriver     Chrome     executable_path=/usr/local/bin/chromedriver
+        Create Webdriver     Firefox     executable_path=/usr/local/bin/geckodriver
         Sleep    1
         # Opening the link
         Go to    https://bank.paysera.com/lt/login?fbclid=IwAR1qUl15HovXkqaDykKqiVdbisoEnhv3SUmf9hnRzXrexW5z1uCzTnczkb8
         Sleep    1
         # Loginas
-        Input Text    name=userIdentifier    mariaus.mailbox@gmail.com
+        Input Text    name=userIdentifier    kazlausko@gmail.com
         Press Keys    css=button[type="submit"][class^="btn"]    Prisijungti
         # Sleep    1
         # Click Element    css=div[id^="login-methods"][class^="panel-heading-narrow"]
@@ -291,3 +295,91 @@ Paysera po reg
         
         Sleep    1
 
+
+*** Settings ***
+Library    SeleniumLibrary  
+*** Test Cases ***
+    
+SEB LEASE TESTS
+    #positive test scenario
+        Create Webdriver     Firefox     executable_path=/usr/local/bin/geckodriver
+        Sleep    1
+        # Opening the link iframe class="calculator-frame" id="lease-calculator"
+        Go to    https://www.seb.lt/eng/private/calculator-leasing
+        Sleep    1
+        # Cookie consent
+        Click Element    link=I agree
+        # Iframe
+        Select Frame    id=lease-calculator
+        #Radio button
+        Press Keys    xpath=//*[@id="financial"]    Financial Lease
+        Sleep    1
+        Input Text    xpath=//*[@id="downpayment"]    20
+        Press Keys    xpath=//*[@id="contractPeriod"]    5
+        Press Keys    xpath=//*[@id="propertyType"]    used
+        Press Keys    xpath=//*[@id="propertyYear"]    15
+        Press Keys    xpath=//*[@id="carCategory"]    passenger
+        Sleep    1
+        Press Keys    xpath=//*[@id="carBrand"]    2
+        Press Keys    xpath=//*[@id="carModel"]    15
+        input text    xpath=//*[@id="interestRate"]    1
+        Sleep    1
+        Click Element    xpath=//*[@id="getSchedule"]
+        Close All Browsers
+        #negative test scenario 
+        Create Webdriver     Firefox     executable_path=/usr/local/bin/geckodriver
+        Go to    https://www.seb.lt/eng/private/calculator-leasing
+        Click Element    link=I agree
+        Select Frame    id=lease-calculator
+        Press Keys    xpath=//*[@id="financial"]    Financial Lease
+        Sleep    1
+        Input Text    xpath=//*[@id="downpayment"]    -1
+        Press Keys    xpath=//*[@id="contractPeriod"]    -1
+        Press Keys    xpath=//*[@id="propertyType"]    used
+        Press Keys    xpath=//*[@id="propertyYear"]    -1
+        Press Keys    xpath=//*[@id="carCategory"]    passenger
+        Sleep    1
+        Press Keys    xpath=//*[@id="carBrand"]    -1
+        Press Keys    xpath=//*[@id="carModel"]    -1
+        input text    xpath=//*[@id="interestRate"]    -1
+        Sleep    1
+        Click Element    xpath=//*[@id="getSchedule"]
+        Close All Browsers
+        #negative test scenario 
+        Create Webdriver     Firefox     executable_path=/usr/local/bin/geckodriver
+        Go to    https://www.seb.lt/eng/private/calculator-leasing
+        Click Element    link=I agree
+        Select Frame    id=lease-calculator
+        Press Keys    xpath=//*[@id="financial"]    Financial Lease
+        Sleep    1
+        Input Text    xpath=//*[@id="downpayment"]    ^
+        Press Keys    xpath=//*[@id="contractPeriod"]    &
+        Press Keys    xpath=//*[@id="propertyType"]    used
+        Press Keys    xpath=//*[@id="propertyYear"]    f
+        Press Keys    xpath=//*[@id="carCategory"]    passenger
+        Sleep    1
+        Press Keys    xpath=//*[@id="carBrand"]    $
+        Press Keys    xpath=//*[@id="carModel"]    %
+        input text    xpath=//*[@id="interestRate"]    1
+        Sleep    1
+        Click Element    xpath=//*[@id="getSchedule"]
+        Close All Browsers 
+        
+
+*** Settings ***
+Library    SeleniumLibrary  
+*** Test Cases ***
+    
+SBLIZINGAS TESTS
+    #Opening SEB.LT 
+        Create Webdriver     Firefox     executable_path=/usr/local/bin/geckodriver
+        Sleep    1
+        # Opening the link iframe class="calculator-frame" id="lease-calculator"
+        Go to    https://www.sblizingas.lt/kreditas-automobiliui/kredito-gavimas
+        Sleep    1
+        Click ELement    css=*[class="promptHeaderContainer"][tabindex="0"][value="2"]    
+        Press Keys    id=credit_output    9000
+        Sleep    5
+        Press Keys    id=term_output    60
+        Close All Browsers 
+        
